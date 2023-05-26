@@ -11,28 +11,19 @@ public class Main
     {
         Lista lista = new Lista();
         
-        lista.begin(1);
-        lista.begin(2);
-        lista.begin(3);
-        
-        lista.begin_to_Last();
-       
-        
-        lista.last(0);
-        lista.last(-1);
+        lista.last(1);
+        lista.last(2);
+        //lista.last(3);
         
         lista.begin_to_Last();
         
-        lista.deleteBegin();
-        lista.deleteLast();
+        lista.middle(0);
         
         lista.begin_to_Last();
-        lista.deleteLast();
-        lista.deleteLast();
-        lista.deleteLast();
-        lista.deleteLast();
         
-        lista.begin(0);
+        lista.deleteMiddle();
+        
+        lista.begin_to_Last();
     }
     
     

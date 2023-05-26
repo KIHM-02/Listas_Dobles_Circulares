@@ -120,7 +120,68 @@ public class Lista
         }
     }
     
-    //
+    // Seccion de agregar al medio
+    
+    public void middle(int dato)
+    {
+        Nodo walker, nuevo;
+        int counter;
+        
+        counter = objects_in_list();
+        
+        if(counter < 3)
+        {
+            System.out.println("\nNecesitas al menos "+(3 - counter)+" para agregar al medio\n");
+        }
+        else
+        {
+            counter = counter /2;
+            walker = inicio;
+            
+            for(int i = 1; i< counter; i++)
+            {
+                walker = walker.getSiguiente();
+            }
+            
+            nuevo = new Nodo(walker, dato, walker.getSiguiente());
+            walker.setSiguiente(nuevo);
+            nuevo.setPrevio(nuevo.getSiguiente());
+            System.out.println("\nSe agrego el dato "+dato+ " al medio");
+        }
+    }
+    
+    public void deleteMiddle()
+    {
+        Nodo walker_prev, walker_next;
+        int counter;
+        
+        counter = objects_in_list();
+        
+        if(counter < 3)
+        {
+            System.out.println("\nNecesitas al menos "+(3 - counter)+" para borrar al medio\n");
+        }
+        else
+        {
+            counter = counter /2;
+            walker_prev = inicio;                                               // posicion = a
+            walker_next = walker_prev.getSiguiente();                           // posicion = b
+            
+            for(int i = 1; i< counter; i++)
+            {
+                walker_prev = walker_prev.getSiguiente(); 
+                walker_next = walker_prev.getSiguiente(); 
+            }
+            
+            walker_prev.setSiguiente(walker_next.getSiguiente());
+            walker_next = walker_next.getSiguiente();
+            walker_next.setPrevio(walker_prev);
+            System.out.println("\nSe ha eliminado el dato de en medio");
+            
+        }
+    }
+    
+    //Metodos que permiten el funcionamiento de las listas
     
     public void firstAdd(int dato)
     {
