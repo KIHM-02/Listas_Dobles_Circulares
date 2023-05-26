@@ -11,6 +11,21 @@ public class Main
     {
         Lista lista = new Lista();
         
+        lista.begin(1);
+        lista.begin(2);
+        lista.begin(3);
+        
+        lista.begin_to_Last();
+        
+        lista.deleteBegin();
+        lista.deleteBegin();
+        lista.deleteBegin();
+        lista.deleteBegin();
+        
+        lista.begin(5);
+        
+        lista.begin_to_Last();
+        
     }
     
     
