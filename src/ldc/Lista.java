@@ -220,6 +220,27 @@ public class Lista
         }
     }
     
+    public void last_to_begin()
+    {
+        Nodo temporal;
+        
+        if(isEmpty())
+        {
+            System.out.println("\nLa lista esta vacia");
+        }
+        else
+        {
+            temporal = ultimo;
+            
+            while(temporal != inicio)
+            {
+                System.out.print(" "+temporal.getDato());
+                temporal = temporal.getPrevio();
+            }
+            System.out.print(" "+temporal.getDato()+"\n");
+        }
+    }
+    
     public int objects_in_list()                                                //este metodo me permite evaluar cuantos objetos hay en mi lista
     {
         Nodo temporal;
@@ -241,5 +262,37 @@ public class Lista
             
             return counter;
         }
+    }
+    
+    public void findData(int dato)
+    {
+        Nodo temporal;
+        int posicion = 1;
+        
+        if(isEmpty())
+        {
+            System.out.println("La lista esta vacia");
+        }
+        else
+        {
+            temporal = inicio;
+            
+            while(temporal != ultimo)
+            {
+                if(temporal.getDato() == dato)
+                { 
+                    System.out.println("La posicion del dato "+dato+" es "+posicion);
+                    temporal = ultimo;
+                }
+                else
+                {
+                    posicion++;
+                    temporal = temporal.getSiguiente();
+                    if(temporal == ultimo)
+                        System.out.println("No se encontro el elemento");
+                }
+            }
+        }
+        
     }
 }
