@@ -16,16 +16,23 @@ public class Main
         lista.begin(3);
         
         lista.begin_to_Last();
+       
         
-        lista.deleteBegin();
-        lista.deleteBegin();
-        lista.deleteBegin();
-        lista.deleteBegin();
-        
-        lista.begin(5);
+        lista.last(0);
+        lista.last(-1);
         
         lista.begin_to_Last();
         
+        lista.deleteBegin();
+        lista.deleteLast();
+        
+        lista.begin_to_Last();
+        lista.deleteLast();
+        lista.deleteLast();
+        lista.deleteLast();
+        lista.deleteLast();
+        
+        lista.begin(0);
     }
     
     
